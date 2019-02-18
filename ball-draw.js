@@ -1,15 +1,4 @@
-window.onload = initAll;
-var usedBallNums = new Array(76);
-
-function initAll() {
-  if (document.getElementById) {
-    document.getElementById("ballDraw").onclick = anotherBallDraw;
-    ballDraw();
-  }
-  else{
-    alert("Your browser does not support this script.");
-  }
-}
+let usedBallNums = new Array(76);
 
 function ballDraw() {
   for(var i=0 ; i<25 ; i++){
@@ -18,10 +7,10 @@ function ballDraw() {
 }
 
 function setBall(thisBall){
-  var currentBall = "ball" + thisBall;
-  var colPlace = new Array(0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4);
-  var colBasis = colPlace[thisBall] * 15;
-  var newNum = colBasis + getNewNum() + 1;
+  let currentBall = "ball" + thisBall;
+  let colPlace = new Array(0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4);
+  let colBasis = colPlace[thisBall] * 15;
+  let newNum = colBasis + getNewNum() + 1;
 
   do{
     newNum = colBasis + getNewNum() + 1;
@@ -36,7 +25,7 @@ function getNewNum() {
 }
 
 function anotherBallDraw() {
-  for (var i = 1; i < usedBallNums.length; i++) {
+  for (let i = 1; i < usedBallNums.length; i++) {
     usedBallNums[i] = false;
   };
 
