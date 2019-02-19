@@ -24,4 +24,14 @@ th, td {
 	font-size: 24px;
 }
 
+li {
+	text-decoration: none;
+}
 
+.bingo-card {
+	float: left;
+}
+
+.balls-list {
+	float: right;
+}

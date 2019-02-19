@@ -1,97 +1,74 @@
 <html>
+
 <head>
 	<title>Make Your Own Bingo Card</title>
 	<link rel="stylesheet" rev="stylesheet" href="bingo-card.css" />
-	
+
 </head>
+
 <body>
-<h1>Create A Bingo Card</h1>
-<table>
-	<tr>
-		<th width="20%">B</th>
-		<th width="20%">I</th>
-		<th width="20%">N</th>
-		<th width="20%">G</th>
-		<th width="20%">O</th>
-	</tr>
-	<tr>
-		<td id="square0">&nbsp;</td>
-		<td id="square1">&nbsp;</td>
-		<td id="square2">&nbsp;</td>
-		<td id="square3">&nbsp;</td>
-		<td id="square4">&nbsp;</td>
-	</tr>
-	<tr>
-		<td id="square5">&nbsp;</td>
-		<td id="square6">&nbsp;</td>
-		<td id="square7">&nbsp;</td>
-		<td id="square8">&nbsp;</td>
-		<td id="square9">&nbsp;</td>
-	</tr>
-	<tr>
-		<td id="square10">&nbsp;</td>
-		<td id="square11">&nbsp;</td>
-		<td id="square12">&nbsp;</td>
-		<td id="square13">&nbsp;</td>
-		<td id="square14">&nbsp;</td>
-	</tr>
-	<tr>
-		<td id="square15">&nbsp;</td>
-		<td id="square16">&nbsp;</td>
-		<td id="square17">&nbsp;</td>
-		<td id="square18">&nbsp;</td>
-		<td id="square19">&nbsp;</td>
-	</tr>
-	<tr>
-		<td id="square20">&nbsp;</td>
-		<td id="square21">&nbsp;</td>
-		<td id="square22">&nbsp;</td>
-		<td id="square23">&nbsp;</td>
-		<td id="square24">&nbsp;</td>
-	</tr>
-</table>
-<br>
-<button id="newCard">Get New Card</button>
-<hr>
-<br>
+	<div class="bingo-card">
+			<h1>Create A Bingo Card</h1>
+	<table>
+		<tr>
+			<th width="20%">B</th>
+			<th width="20%">I</th>
+			<th width="20%">N</th>
+			<th width="20%">G</th>
+			<th width="20%">O</th>
+		</tr>
+		<tr>
+			<td id="square0">&nbsp;</td>
+			<td id="square1">&nbsp;</td>
+			<td id="square2">&nbsp;</td>
+			<td id="square3">&nbsp;</td>
+			<td id="square4">&nbsp;</td>
+		</tr>
+		<tr>
+			<td id="square5">&nbsp;</td>
+			<td id="square6">&nbsp;</td>
+			<td id="square7">&nbsp;</td>
+			<td id="square8">&nbsp;</td>
+			<td id="square9">&nbsp;</td>
+		</tr>
+		<tr>
+			<td id="square10">&nbsp;</td>
+			<td id="square11">&nbsp;</td>
+			<td id="square12">&nbsp;</td>
+			<td id="square13">&nbsp;</td>
+			<td id="square14">&nbsp;</td>
+		</tr>
+		<tr>
+			<td id="square15">&nbsp;</td>
+			<td id="square16">&nbsp;</td>
+			<td id="square17">&nbsp;</td>
+			<td id="square18">&nbsp;</td>
+			<td id="square19">&nbsp;</td>
+		</tr>
+		<tr>
+			<td id="square20">&nbsp;</td>
+			<td id="square21">&nbsp;</td>
+			<td id="square22">&nbsp;</td>
+			<td id="square23">&nbsp;</td>
+			<td id="square24">&nbsp;</td>
+		</tr>
+	</table>
+	<br>
+	<button id="newCard">Get New Card</button>
+	</div>
+
+	<div class="balls-list">
+		<ul id="balls-drawn">
+		</ul>
+		<br>
+		<button id="set-ball">Draw Ball</button>
+	</div>
 
 
-<table>
-	<tr>
-		<td id="ball0">&nbsp;</td>
-		<td id="ball1">&nbsp;</td>
-		<td id="ball2">&nbsp;</td>
-		<td id="ball3">&nbsp;</td>
-		<td id="ball4">&nbsp;</td>
-		<td id="ball5">&nbsp;</td>
-		<td id="ball6">&nbsp;</td>
-		<td id="ball7">&nbsp;</td>
-		<td id="ball8">&nbsp;</td>
-		<td id="ball9">&nbsp;</td>
-		<td id="ball10">&nbsp;</td>
-		<td id="ball11">&nbsp;</td>
-		<td id="ball12">&nbsp;</td>
-		<td id="ball13">&nbsp;</td>
-		<td id="ball14">&nbsp;</td>
-		<td id="ball15">&nbsp;</td>
-		<td id="ball16">&nbsp;</td>
-		<td id="ball17">&nbsp;</td>
-		<td id="ball18">&nbsp;</td>
-		<td id="ball19">&nbsp;</td>
-		<td id="ball20">&nbsp;</td>
-		<td id="ball21">&nbsp;</td>
-		<td id="ball22">&nbsp;</td>
-		<td id="ball23">&nbsp;</td>
-		<td id="ball24">&nbsp;</td>
-	</tr>
-</table>
-<br>
-<button id="ballDraw">Draw Balls</button>
-<button id="set-ball">Set Ball</button>
-
-<script type="text/javascript" src="bingo-card.js"></script>
-<script type="text/javascript" src="ball-draw.js"></script>
-<script type="text/javascript" src="ball-draw-refactor.js"></script>
+	<script type="text/javascript" src="bingo-card.js"></script>
+	<!-- <script type="text/javascript" src="ball-draw.js"></script> -->
+	<script type="text/javascript" src="ball-draw-refactor.js"></script>
 
 </body>
+
 </html>
