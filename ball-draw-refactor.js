@@ -24,5 +24,11 @@ setNewBall.addEventListener('click', displayBallDraw);
 
 
 function displayBallDraw() {
-  console.log(allBallsDrawn.sort());
+  let ballsDrawn = document.getElementById('balls-drawn');
+  let li = document.createElement('li')
+
+  allBallsDrawn.forEach(ball => {
+    ballsDrawn.appendChild(li);
+    li.innerText = ball;
+  });
 }
