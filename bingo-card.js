@@ -8,10 +8,10 @@ function initAll() {
     document.getElementById("newCard").onclick = anotherCard;
     newCard();
   }
-  if (document.getElementById) {
-    document.getElementById("ballDraw").onclick = anotherBallDraw;
-    ballDraw();
-  }
+  // if (document.getElementById) {
+  //   document.getElementById("ballDraw").onclick = anotherBallDraw;
+  //   ballDraw();
+  // }
   else{
     alert("Your browser does not support this script.");
   }
