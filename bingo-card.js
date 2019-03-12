@@ -64,11 +64,9 @@ function daubCard() {
 function daubSquare(_thisSquare) {
   let _currentSquare = document.getElementById("square" + _thisSquare);
   
-
   allBallsDrawn.forEach(ball => {
     if(_currentSquare.innerHTML == ball) {
       _currentSquare.style.backgroundColor = 'red';
     }
-    
   });
 }
