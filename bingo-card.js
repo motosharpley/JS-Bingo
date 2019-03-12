@@ -2,17 +2,11 @@ window.onload = initAll;
 let usedCardNums = new Array(76);
 
 
-
 function initAll() {
   if (document.getElementById) {
     document.getElementById("newCard").onclick = anotherCard;
     newCard();
-  }
-  // if (document.getElementById) {
-  //   document.getElementById("ballDraw").onclick = anotherBallDraw;
-  //   ballDraw();
-  // }
-  else{
+  }else{
     alert("Your browser does not support this script.");
   }
 }
@@ -48,4 +42,30 @@ function anotherCard() {
 
   newCard();
   return false;
+}
+
+/*
+*
+* Daub Bingo Card
+*
+*/
+
+// for each usedCardNums that contains allBallsDrawn set css currentSquare red 
+
+function daubCard() {
+  for(var i=0 ; i<25 ; i++){
+      daubSquare(i);
+    }
+}
+
+function daubSquare(_thisSquare) {
+  let _currentSquare = document.getElementById("square" + _thisSquare);
+  
+
+  allBallsDrawn.forEach(ball => {
+    if(_currentSquare.innerHTML == ball) {
+      _currentSquare.style.backgroundColor = 'red';
+    }
+    
+  });
 }

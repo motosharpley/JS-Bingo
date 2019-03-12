@@ -31,4 +31,5 @@ function displayBallDraw() {
     ballsDrawn.appendChild(li);
     li.innerText = ball;
   });
+  daubCard();
 }
