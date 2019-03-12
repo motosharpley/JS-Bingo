@@ -19,6 +19,7 @@ function newCard() {
 
 function setSquare(thisSquare){
   let currentSquare = "square" + thisSquare;
+  
   let colPlace = new Array(0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4);
   let colBasis = colPlace[thisSquare] * 15;
   let newNum = colBasis + getNewNum() + 1;
@@ -29,6 +30,8 @@ function setSquare(thisSquare){
   
   usedCardNums[newNum] = true;
   document.getElementById(currentSquare).innerHTML = newNum;
+  document.getElementById(currentSquare).style.backgroundColor = '';
+  daubCard();
 }
 
 function getNewNum() {
