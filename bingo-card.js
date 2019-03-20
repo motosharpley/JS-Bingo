@@ -78,7 +78,7 @@ function daubSquare(_thisSquare) {
 // ******** INTERIM PRIZE DAUB ***************
 
 function interimDaubCard() {
-  for(var i=0 ; i<24 ; i++){
+  for(var i=0 ; i<25 ; i++){
       interimDaub(i);
     }
 }
