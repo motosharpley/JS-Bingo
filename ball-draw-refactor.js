@@ -14,9 +14,24 @@ function drawBall(){
   return allBallsDrawn.push(currentBall);  
 }
 
+// Draw intial 24 balls to start new game
+let newGameBallDraw = document.getElementById('new-game-ball-draw');
+newGameBallDraw.addEventListener('click',newGameDraw);
+
+function newGameDraw() {
+ for(let i=0; i<24; i++){
+   drawBall();
+   displayBallDraw();
+ }
+ console.log(allBallsDrawn);
+}
+// end Game init ball draw
+
+
 let setNewBall = document.getElementById('set-ball');
 setNewBall.addEventListener('click', drawBall);
 setNewBall.addEventListener('click', displayBallDraw);
+
 
 function displayBallDraw() {
   let ballsDrawn = document.getElementById('balls-drawn');
@@ -27,6 +42,10 @@ function displayBallDraw() {
     li.innerText = ball;
   });
   daubCard();
+  setTimeout(() => {
+    interimDaubCard();
+  }, 100);
+  
 }
 
 // RESET BALL DRAW AND GET FRESH CARD
