@@ -23,7 +23,6 @@ function newGameDraw() {
    drawBall();
    displayBallDraw();
  }
- console.log(allBallsDrawn);
 }
 // end Game init ball draw
 
