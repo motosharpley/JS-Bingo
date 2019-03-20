@@ -24,8 +24,8 @@ th, td {
 	font-size: 24px;
 }
 
-li {
-	text-decoration: none;
+ul {
+	list-style: none;
 }
 
 .bingo-card {
@@ -34,4 +34,20 @@ li {
 
 .balls-list {
 	float: right;
+	max-height: 400px;
+	max-width: 260px;
+	
+}
+
+.balls-list button {
+	margin: 3px;
+}
+
+.balls-list li {
+	background-color: cadetblue;
+	float: right;
+	width: 2em;
+	border: 1px solid red;
+	border-radius: 100%;
+	text-align: center;
 }
