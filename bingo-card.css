@@ -36,11 +36,12 @@ ul {
 	float: right;
 	max-height: 400px;
 	max-width: 260px;
-	
+	padding-right: 40px;
 }
 
 .balls-list button {
 	margin: 3px;
+	margin-left: 20px;
 }
 
 .balls-list li {
