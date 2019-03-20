@@ -32,6 +32,9 @@ function setSquare(thisSquare){
   document.getElementById(currentSquare).innerHTML = newNum;
   document.getElementById(currentSquare).style.backgroundColor = '';
   daubCard();
+  setTimeout(() => {
+    interimDaubCard();
+  }, 100);
 }
 
 function getNewNum() {
@@ -66,7 +69,27 @@ function daubSquare(_thisSquare) {
   
   allBallsDrawn.forEach(ball => {
     if(_currentSquare.innerHTML == ball) {
-      _currentSquare.style.backgroundColor = 'red';
+      _currentSquare.style.backgroundColor = 'yellow';
     }
   });
+}
+
+
+// ******** INTERIM PRIZE DAUB ***************
+
+function interimDaubCard() {
+  for(var i=0 ; i<24 ; i++){
+      interimDaub(i);
+    }
+}
+
+function interimDaub(_thisSquare) {
+  let _currentSquare = document.getElementById("square" + _thisSquare);
+  
+  for(let i=0; i < 24; i++){
+    let ball = allBallsDrawn[i];
+    if(_currentSquare.innerHTML == ball) {
+      _currentSquare.style.backgroundColor = 'red';
+    }
+  }
 }
