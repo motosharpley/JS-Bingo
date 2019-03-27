@@ -1,54 +1,98 @@
 body {
-	background-color: white;
+	background-color: #465770;
 	color: black;
 	font-size: 20px;
 	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 }
 
-h1, th {
-	font-family: Georgia, "Times New Roman", Times, serif;
+.container {
+	display: grid;
+	grid-template-columns: 1fr 3fr 2fr;
+	grid-template-rows: 200px 3fr 200px;
+	grid-gap: 20px;
+	grid-template-areas: 
+	"patterns bingo-card ball-draw"
+	"patterns bingo-card ball-draw"
+	"footer footer footer"
 }
 
-h1 {
-	font-size: 28px;
+/* ***** Player Bingo Card ***** */
+.player-card {
+	border: 2px solid #666;
+	grid-area: bingo-card;
+	padding: 20px;
+	
 }
 
-table {
-	border-collapse: collapse;
+.bingo-card {
+	margin: auto;
 }
 
-th, td {
+.bingo-card th, td {
 	padding: 10px;
 	border: 2px #666 solid;
 	text-align: center;
 	font-size: 24px;
+	background-color: azure;
+
 }
 
+/* ***** Patterns ***** */
+.patterns {
+	border: 2px solid #666;
+	grid-area: patterns;
+}
+
+.win-patterns table {
+	border-collapse: collapse;
+}
+
+.win-patterns td {
+	border: 1px #666 solid;
+	width: 25px;
+	padding: 0;
+	margin: 0;
+	background-color: azure;
+}
+
+/* ***** Balls Drawn ***** */
 ul {
 	list-style: none;
-}
-
-.bingo-card {
-	float: left;
+	margin: auto;
 }
 
 .balls-list {
-	float: right;
-	max-height: 400px;
 	max-width: 260px;
-	padding-right: 40px;
-}
-
-.balls-list button {
-	margin: 3px;
-	margin-left: 20px;
+	border: 2px #666 solid;
+	grid-area: ball-draw;
 }
 
 .balls-list li {
-	background-color: cadetblue;
-	float: right;
-	width: 2em;
-	border: 1px solid red;
+	float: left;
+	background-color: rgb(179, 216, 218);
+	width: 1.8em;
+	height: 1.8em;
+	border: 1px solid #666;
 	border-radius: 100%;
 	text-align: center;
+	margin: 1px;
+	padding-top: 2px;
+}
+
+/* ***** Rules ***** */
+.rules {
+	border: 2px solid #666;
+	color: white;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+/* ***** footer ***** */
+.footer {
+	grid-area: footer;
+	margin: auto;
+}
+
+.footer button {
+	height: 40px;
 }
