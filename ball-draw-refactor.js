@@ -6,12 +6,18 @@ function getNewBall() {
 let allBallsDrawn = new Array;
 
 function drawBall(){
-  let currentBall = getNewBall();
-  do {
-    currentBall = getNewBall();
-  } while (allBallsDrawn.includes(currentBall));
-
-  return allBallsDrawn.push(currentBall);  
+  
+  if(allBallsDrawn.length != 75){
+    let currentBall = getNewBall();
+    do {
+      currentBall = getNewBall();
+    } while (allBallsDrawn.includes(currentBall));
+  
+    return allBallsDrawn.push(currentBall);
+  } else {
+    alert("All Balls Have Been Drawn, Please Start New Game");
+  }
+  
 }
 
 // Draw intial 24 balls to start new game
@@ -19,10 +25,15 @@ let newGameBallDraw = document.getElementById('new-game-ball-draw');
 newGameBallDraw.addEventListener('click',newGameDraw);
 
 function newGameDraw() {
- for(let i=0; i<24; i++){
-   drawBall();
-   displayBallDraw();
- }
+  if(allBallsDrawn.length < 48){
+    for(let i=0; i<24; i++){
+      drawBall();
+      displayBallDraw();
+    }
+  } else {
+    alert("Must draw next ball")
+  }
+
 }
 // end Game init ball draw
 
@@ -59,10 +70,36 @@ function resetBalls() {
 }
 
 function resetBallDisplay() {
-  let ballDisplay = document.getElementById('balls-drawn');
-  allBallsDrawn.forEach(ball => {
+    let ballDisplay = document.getElementById('balls-drawn');
+    allBallsDrawn.forEach(ball => {
+      ballDisplay.removeChild(ballDisplay.childNodes[0]);
+    });
     ballDisplay.removeChild(ballDisplay.childNodes[0]);
-  });
-  ballDisplay.removeChild(ballDisplay.childNodes[0]);
-}
+  }
 // END RESET GAME
+
+//  AutoPlay
+
+// function AutoPlay(){
+//   if(allBallsDrawn.length < 75){
+//     drawBall();
+//     displayBallDraw();
+//   }    
+// }
+
+// // let AP = function(){
+// //   setInterval(AutoPlay, 1000);
+// // }
+// let AP = function() {
+//   setInterval(AutoPlay, 1000);
+// }
+
+// function stopAP() {
+//   clearInterval(AP);
+// }
+
+// let AutoPlayButton = document.getElementById('auto-play');
+// AutoPlayButton.addEventListener('click', AP);
+
+// let stopAutoPlay = document.getElementById('stop-auto-play');
+// stopAutoPlay.addEventListener('click', stopAP);
