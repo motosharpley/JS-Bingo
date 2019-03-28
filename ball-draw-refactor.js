@@ -80,26 +80,25 @@ function resetBallDisplay() {
 
 //  AutoPlay
 
-// function AutoPlay(){
-//   if(allBallsDrawn.length < 75){
-//     drawBall();
-//     displayBallDraw();
-//   }    
-// }
+function AutoPlay(){
+  if(allBallsDrawn.length < 75){
+    drawBall();
+    displayBallDraw();
+  }    
+}
 
-// // let AP = function(){
-// //   setInterval(AutoPlay, 1000);
-// // }
-// let AP = function() {
-//   setInterval(AutoPlay, 1000);
-// }
+let AP;
 
-// function stopAP() {
-//   clearInterval(AP);
-// }
+function startAP(){
+  AP = setInterval(AutoPlay, 1000);
+}
 
-// let AutoPlayButton = document.getElementById('auto-play');
-// AutoPlayButton.addEventListener('click', AP);
+function stopAP() {
+  clearInterval(AP);
+}
 
-// let stopAutoPlay = document.getElementById('stop-auto-play');
-// stopAutoPlay.addEventListener('click', stopAP);
+let AutoPlayButton = document.getElementById('auto-play');
+AutoPlayButton.addEventListener('click', startAP);
+
+let stopAutoPlay = document.getElementById('stop-auto-play');
+stopAutoPlay.addEventListener('click', stopAP);
