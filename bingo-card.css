@@ -1,6 +1,6 @@
 body {
 	background-color: #465770;
-	color: black;
+	color: azure;
 	font-size: 20px;
 	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 	margin: 0;
@@ -8,6 +8,7 @@ body {
 }
 
 .container {
+	margin-left: 20px;
 	display: grid;
 	grid-template-columns: 1fr 3fr 2fr;
 	grid-template-rows: 200px 3fr 20px;
@@ -37,7 +38,7 @@ body {
 	text-align: center;
 	font-size: 24px;
 	background-color: azure;
-
+	color: rgb(46, 45, 45);
 }
 
 /* ***** Patterns ***** */
@@ -68,6 +69,7 @@ ul {
 	max-width: 260px;
 	border: 2px #666 solid;
 	grid-area: ball-draw;
+	
 }
 
 .balls-list li {
@@ -80,6 +82,7 @@ ul {
 	text-align: center;
 	margin: 1px;
 	padding-top: 2px;
+	color: rgb(46, 45, 45);
 }
 
 /* ***** Rules ***** */
@@ -98,4 +101,6 @@ ul {
 
 .footer button {
 	height: 40px;
+	background-color: rgb(129, 129, 129);
+	color: azure;
 }
