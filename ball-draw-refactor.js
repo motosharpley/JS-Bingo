@@ -84,7 +84,9 @@ function AutoPlay(){
   if(allBallsDrawn.length < 75){
     drawBall();
     displayBallDraw();
-  }    
+  } else {
+    stopAP();
+  }
 }
 
 let AP;
