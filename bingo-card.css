@@ -1,106 +1,125 @@
 body {
-	background-color: #465770;
-	color: azure;
-	font-size: 20px;
-	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
-	margin: 0;
-	padding: 0;
+  background-color: #465770;
+  color: azure;
+  font-size: 20px;
+  font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 1rem;
 }
 
 .container {
-	margin-left: 20px;
-	display: grid;
-	grid-template-columns: 1fr 3fr 2fr;
-	grid-template-rows: 200px 3fr 20px;
-	grid-gap: 20px;
-	grid-template-areas: 
-	"patterns bingo-card ball-draw"
-	"patterns bingo-card ball-draw"
-	"footer footer footer"
+  margin-left: 20px;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-rows: 560px 3fr 20px;
+  grid-gap: 20px;
+  grid-template-areas:
+    'patterns bingo-card ball-draw'
+    'footer footer footer';
 }
 
 /* ***** Player Bingo Card ***** */
 .player-card {
-	border: 2px solid #666;
-	grid-area: bingo-card;
-	padding: 10px;
-	text-align: center;
+  border: 1px solid #666;
+  border-radius: 5px;
+  grid-area: bingo-card;
+  padding: 10px;
+  text-align: center;
+  max-width: 310px;
 }
 
 .bingo-card {
-	margin: auto;
-
+  margin: auto;
 }
 
-.bingo-card th, td {
-	padding: 10px;
-	border: 2px #666 solid;
-	text-align: center;
-	font-size: 24px;
-	background-color: azure;
-	color: rgb(46, 45, 45);
+.bingo-card th,
+td {
+  padding: 10px;
+  border: 1px #666 solid;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  background-color: azure;
+  color: rgb(46, 45, 45);
 }
 
 /* ***** Patterns ***** */
 .patterns {
-	border: 2px solid #666;
-	grid-area: patterns;
+  border: 1px solid #666;
+  border-radius: 5px;
+  grid-area: patterns;
+  min-width: 160px;
+  padding-left: 12px;
+  text-align: center;
 }
 
 .win-patterns table {
-	border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .win-patterns td {
-	border: 1px #666 solid;
-	width: 25px;
-	padding: 0;
-	margin: 0;
-	background-color: azure;
+  border: 1px #666 solid;
+  width: 25px;
+  padding: 0;
+  margin: 0;
+  background-color: azure;
 }
 
 /* ***** Balls Drawn ***** */
 ul {
-	list-style: none;
-	margin: auto;
+  list-style: none;
+  margin: auto;
 }
 
 .balls-list {
-	max-width: 260px;
-	border: 2px #666 solid;
-	grid-area: ball-draw;
-	
+  max-width: 260px;
+  border: 1px #666 solid;
+  border-radius: 5px;
+  grid-area: ball-draw;
+  text-align: center;
 }
 
 .balls-list li {
-	float: left;
-	background-color: rgb(179, 216, 218);
-	width: 1.4em;
-	height: 1.4em;
-	border: 1px solid #666;
-	border-radius: 100%;
-	text-align: center;
-	margin: 1px;
-	padding-top: 2px;
-	color: rgb(46, 45, 45);
+  float: left;
+  background-color: rgb(179, 216, 218);
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #666;
+  border-radius: 100%;
+  text-align: center;
+  margin: 1px;
+  padding-top: 2px;
+  color: rgb(46, 45, 45);
 }
 
 /* ***** Rules ***** */
 .rules {
-	border: 2px solid #666;
-	color: white;
-	padding: 5px;
-	margin-top: 10px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin-top: 20px;
 }
 
 /* ***** footer ***** */
 .footer {
-	grid-area: footer;
-	margin: auto;
+  grid-area: footer;
+  margin: 10px;
+  border: 1px solid #666;
+  border-radius: 5px;
 }
 
 .footer button {
-	height: 40px;
-	background-color: rgb(129, 129, 129);
-	color: azure;
+  height: 40px;
+  margin: 5px;
+  background-color: rgb(129, 129, 129);
+  color: azure;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.footer button:hover {
+  background-color: rgb(179, 216, 218);
+  color: rgb(46, 45, 45);
 }
