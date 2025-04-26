@@ -20,7 +20,7 @@ function drawBall() {
   }
 }
 
-// Draw intial 24 balls to start new game
+// Draw intial 24 balls to start new interim game
 let newGameBallDraw = document.getElementById('new-game-ball-draw');
 newGameBallDraw.addEventListener('click', newGameDraw);
 
@@ -35,8 +35,8 @@ function newGameDraw() {
 }
 // end Game init ball draw
 
-let setNewBall = document.getElementById('set-ball');
-setNewBall.addEventListener('click', drawBall);
+let drawNewBall = document.getElementById('draw-new-ball');
+drawNewBall.addEventListener('click', drawBall);
 
 function displayBallDraw() {
   let ballsDrawn = document.getElementById('balls-drawn');
@@ -54,16 +54,16 @@ function displayBallDraw() {
 }
 
 // RESET BALL DRAW AND GET FRESH CARD
-let resetBallDraw = document.getElementById('reset-ball');
-resetBallDraw.addEventListener('click', resetBallDisplay);
-resetBallDraw.addEventListener('click', resetBalls);
-resetBallDraw.addEventListener('click', newCard);
+let resetGame = document.getElementById('reset-game');
+resetGame.addEventListener('click', resetBallDisplay);
+resetGame.addEventListener('click', newCard);
 
 function resetBalls() {
   allBallsDrawn = [];
 }
 
 function resetBallDisplay() {
+  resetBalls();
   let ballDisplay = document.getElementById('balls-drawn');
   while (ballDisplay.firstChild) {
     ballDisplay.removeChild(ballDisplay.firstChild);
@@ -72,7 +72,6 @@ function resetBallDisplay() {
 // END RESET GAME
 
 //  AutoPlay
-
 function AutoPlay() {
   if (allBallsDrawn.length < 75) {
     drawBall();
