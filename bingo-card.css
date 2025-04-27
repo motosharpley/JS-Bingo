@@ -1,5 +1,5 @@
 body {
-  background-color: #465770;
+  /* background-color: #465770; */
   color: azure;
   font-size: 20px;
   font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
@@ -8,6 +8,9 @@ body {
 }
 
 .container {
+  background-color: #465770;
+  border-radius: 5px;
+  padding: 20px;
   margin-left: 20px;
   max-width: 800px;
   display: grid;
@@ -110,7 +113,7 @@ ul {
   border-radius: 5px;
 }
 
-.footer button {
+button {
   height: 40px;
   margin: 5px;
   background-color: rgb(129, 129, 129);
@@ -119,7 +122,77 @@ ul {
   border-radius: 5px;
   font-size: 16px;
 }
-.footer button:hover {
+button:hover {
   background-color: rgb(179, 216, 218);
   color: rgb(46, 45, 45);
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 860px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'bingo-card'
+      'ball-draw'
+      'footer';
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .player-card {
+    max-width: 100%;
+  }
+
+  .balls-list {
+    max-width: 100%;
+  }
+  .patterns {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  .bingo-card th,
+  .bingo-card td {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .balls-list li {
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 0.8em;
+  }
+
+  .patterns {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer button {
+    font-size: 14px;
+    height: 35px;
+  }
+
+  .bingo-card th,
+  .bingo-card td {
+    font-size: 14px;
+    padding: 3px;
+  }
+
+  .balls-list li {
+    width: 1em;
+    height: 1em;
+    font-size: 0.7em;
+  }
 }
